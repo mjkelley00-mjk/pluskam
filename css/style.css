@@ -3,10 +3,10 @@
    ========================================================= */
 
 :root {
-  --purple: #9b6fb0;        /* primary brand purple */
-  --purple-dark: #85589c;   /* hover / emphasis */
-  --purple-soft: #c9aede;   /* light accents */
-  --ink: #4a4a4a;           /* body text */
+  --purple: #ac7ab4;        /* primary brand purple */
+  --purple-dark: #8a5a91;   /* hover / emphasis */
+  --purple-soft: #d4bce0;   /* light accents */
+  --ink: #643c6a;           /* body text */
   --bg: #ffffff;
   --line: #ece6f1;
   --max: 1180px;
@@ -98,7 +98,7 @@ a { color: inherit; text-decoration: none; }
 
 /* ---------- Brands ---------- */
 .eyebrow { text-align: center; color: var(--purple); font-size: 1.5rem; font-weight: 400; margin: 54px 0 0; }
-.brands-band { margin-top: 26px; padding: 48px var(--pad); background: linear-gradient(135deg, #b79ad0 0%, #9b6fb0 55%, #855b9c 100%); }
+.brands-band { margin-top: 26px; padding: 48px var(--pad); background: linear-gradient(135deg, #c9a5d0 0%, #ac7ab4 55%, #8a5a91 100%); }
 .brands {
   max-width: 980px; margin: 0 auto;
   display: flex; flex-wrap: wrap; align-items: center; justify-content: center;

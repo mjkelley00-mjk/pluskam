@@ -14,6 +14,18 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .mosaic{display:grid;grid-template-columns:repeat(3,1fr);gap:4px}
+    .tile{position:relative;overflow:hidden;aspect-ratio:475/358;background:#eee}
+    .tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+    .tile .over{opacity:0;transition:opacity .35s ease}
+    .tile:hover .over{opacity:1}
+    @media(max-width:860px){.mosaic{grid-template-columns:repeat(2,1fr)}}
+    .eyebrow{text-align:center;color:#9b6fb0;font-size:1.5rem;font-weight:400;margin:54px 0 0}
+    .brands-band{margin-top:26px;padding:48px 40px;background:linear-gradient(135deg,#b79ad0,#9b6fb0 55%,#855b9c)}
+    .brands{max-width:980px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:40px 54px}
+    .brands img{max-height:52px;max-width:155px;height:auto;width:auto;object-fit:contain;filter:brightness(0) invert(1);opacity:.95}
+  </style>
 </head>
 <body>
 

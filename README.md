@@ -39,17 +39,35 @@ Plain HTML/CSS — no build step, no dependencies, nothing to pay for.
 
 ## Point pluskam.com at GitHub Pages
 
-The included `CNAME` file already sets the domain to `www.pluskam.com`.
+DNS for pluskam.com is currently hosted at Wix (nameservers `ns10/ns11.wixdns.net`),
+so you'll edit these in the Wix **Manage DNS Records** panel. The `CNAME` file in
+this repo already sets the site domain to `www.pluskam.com`.
 
-At your **domain registrar** (where you bought pluskam.com), set DNS:
+**Change ONLY the two website records:**
 
-- A **CNAME** record: host `www` → value `<you>.github.io`
-- For the bare domain `pluskam.com`, four **A** records pointing to GitHub:
-  `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
+| Type | Host | Current value (Wix) | New value |
+|------|------|---------------------|-----------|
+| A | `pluskam.com` | `185.230.63.171`, `185.230.63.186`, `185.230.63.107` | Replace all three with GitHub's four: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153` |
+| CNAME | `www.pluskam.com` | `cdn1.wixdns.net` | `<your-username>.github.io` |
 
-Then in **Settings → Pages → Custom domain**, enter `www.pluskam.com`, save, and tick **Enforce HTTPS** once it's available.
+**Leave every other record exactly as it is — these run your email and Google
+services, and deleting any of them will break email:**
 
-> If your domain is currently managed by Wix, you'll change these DNS records in the Wix domain settings (or move the domain to another registrar). Do this only once GitHub Pages is live so the site never goes dark.
+- All **MX** records (Google Workspace mail)
+- **TXT** `v=spf1 include:_spf.google.com ~all`
+- **CNAME** `calendar`, `docs`, `mail` → `ghs.googlehosted.com`
+- **CNAME** `imap`, `pop`, `smtp`, `webmail` → fatcow (email)
+- **CNAME** `m.pluskam.com` → wixdns (harmless leftover; optional to remove later)
+- **NS** records (not editable)
+
+Then in GitHub **Settings → Pages → Custom domain**, enter `www.pluskam.com`, save,
+and tick **Enforce HTTPS** once it becomes available (can take up to an hour).
+
+> **Do this only after the GitHub site looks right at the github.io URL**, so the
+> domain never goes dark. And keep the domain/DNS active at Wix — cancel the Wix
+> *website plan* if you like, but don't close the whole account or the domain, or
+> you'll lose the DNS that your email depends on. To leave Wix entirely, transfer
+> the domain to another registrar first and re-create the email records there.
 
 ## Turn on the contact form
 

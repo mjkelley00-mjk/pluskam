@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | +kam</title>
+  <meta name="description" content="Let's work together. Contact +kam in Chicago.">
+  <link rel="canonical" href="https://www.pluskam.com/contact">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="index.html"><img src="images/logo.png" alt="+kam"></a>
+      <button class="nav-toggle" aria-label="Toggle menu" onclick="document.getElementById('nav').classList.toggle('open')"><span></span><span></span><span></span></button>
+      <nav class="nav" id="nav">
+        <a href="index.html">Work</a>
+        <a href="services.html">Services</a>
+        <a href="casestudies.html">Case Studies</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+      <div class="socials">
+        <a href="https://www.facebook.com/pluskam" target="_blank" rel="noopener"><img src="images/social-facebook.png" alt="Facebook"></a>
+        <a href="https://www.twitter.com/pluskam" target="_blank" rel="noopener"><img src="images/social-twitter.png" alt="Twitter"></a>
+        <a href="https://instagram.com/pluskam" target="_blank" rel="noopener"><img src="images/social-instagram.png" alt="Instagram"></a>
+      </div>
+    </div>
+  </header>
+
+  <section class="tagline small">
+    <h1>+kam works with agencies and brands to engage consumers through experiential activation and content creation.</h1>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h2>Let's work together!</h2>
+          <div class="block">
+            <div class="label">Office</div>
+            <div>+kam<br>1653 S Blue Island Ave<br>Chicago, IL 60608</div>
+          </div>
+          <div class="block">
+            <div class="label">Email</div>
+            <div><a href="mailto:contact@pluskam.com">contact@pluskam.com</a></div>
+          </div>
+          <div class="block">
+            <div class="label">Phone</div>
+            <div><a href="tel:+13129676231">312.967.6231</a></div>
+          </div>
+        </div>
+
+        <!-- Contact form powered by Formspree. Submissions go to the address on the connected Formspree account. -->
+        <form class="contact-form" action="https://formspree.io/f/xykqnqee" method="POST">
+          <label for="name">Name</label>
+          <input id="name" type="text" name="name" placeholder="Your name" required>
+          <label for="email">Email</label>
+          <input id="email" type="email" name="email" placeholder="you@example.com" required>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="How can we help?" required></textarea>
+          <button class="btn" type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <nav class="footer-nav">
+        <a href="index.html">Work</a>
+        <a href="services.html">Services</a>
+        <a href="casestudies.html">Case Studies</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="copyright">&copy; 2022 by +kam LLC &#9702; All rights reserved</div>
+    </div>
+  </footer>
+
+</body>
+</html>
